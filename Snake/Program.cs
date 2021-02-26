@@ -48,21 +48,41 @@ namespace Snake
         {
             return y;
         }
-        public static void setfriutX()
+
+        public static double getSpeed()
+        {
+            return speed;
+        }
+
+        public static void setSpeed(double value)
+        {
+            speed = value;
+        }
+        public static void setFriutX()
         {
             Random rnd = new Random();
             friutX = rnd.Next(1, globalVars.getWidth() / 2) * 2 - 1;
+            for(int i = 0; i < nTail; ++i)
+            {
+                if (friutX == tailX[i])
+                    setFriutX();                    
+            }
         }
-        public static int getfriutX()
+        public static int getFriutX()
         {
             return friutX;
         }
-        public static void setfriutY()
+        public static void setFriutY()
         {
             Random rnd = new Random();
             fruitY = rnd.Next(1, globalVars.getHeight() - 2);
+            for (int i = 0; i < nTail; ++i)
+            {
+                if (fruitY == tailY[i])
+                    setFriutY();
+            }
         }
-        public static int getfriutY()
+        public static int getFriutY()
         {
             return fruitY;
         }
@@ -115,22 +135,13 @@ namespace Snake
         {
             tailY[index] = value;
         }
-        public static void clearTailX()
-        {
-            int[] newTailX = new int[300];
-            tailX = newTailX;
-        }
-        public static void clearTailY()
-        {
-            int[] newTailY = new int[300];
-            tailY = newTailY;
-        }
         public enum eDirection { STOP, LEFT, RIGHT, UP, DOWN }; // состояния движения самой змейки
         public static eDirection dir;
         private static bool gameOver;
         private const int width = 41; // размеры поля
         private const int height = 21; // const по дефолту static, поэтому не надо писать модификатор static
-        private static int x, y, lastX, lastY, friutX, fruitY, score; // положение змейки и фрукта; score - общий счёт
+        private static int x, y, lastX, lastY, friutX, fruitY, score;// положение змейки и фрукта; score - общий счёт
+        private static double speed;
         private static int[] tailX = new int[300]; // массив хранит координаты каждого элемента хвоста
         private static int[] tailY = new int[300];
         private static int nTail = 0; // кол-во элементов в хвосте
@@ -143,14 +154,13 @@ namespace Snake
             globalVars.setDir(globalVars.eDirection.STOP);
             globalVars.setX(globalVars.getWidth() / 2 - 1);
             globalVars.setY(globalVars.getHeight() / 2 - 1);
-            globalVars.setfriutX();
-            globalVars.setfriutY();
+            globalVars.setFriutX();
+            globalVars.setFriutY();
             globalVars.setScore(0);
             globalVars.setNTail(0);
-            globalVars.clearTailX();
-            globalVars.clearTailY();
             globalVars.setLastX(globalVars.getWidth() / 2 - 5);
             globalVars.setLastY(globalVars.getHeight() / 2 - 5);
+            globalVars.setSpeed(10);
         }
 
         public static void game()
@@ -204,7 +214,7 @@ namespace Snake
                 Draw();
                 Input();
                 Logic();
-                System.Threading.Thread.Sleep(70);// приостанавливает поток на заданное кол-во мс
+                System.Threading.Thread.Sleep((int)(1000 / globalVars.getSpeed())); // приостанавливает поток на заданное кол-во мс
             }
             Console.Clear();
             Console.WriteLine("Для продолжения нажмите Enter, для выхода Escape: "); 
@@ -221,8 +231,8 @@ namespace Snake
             Console.SetCursorPosition(globalVars.getX(), globalVars.getY());
             Console.Write('*');
             Console.SetCursorPosition(globalVars.getLastX(), globalVars.getLastY());
-            Console.Write(' ');            
-            Console.SetCursorPosition(globalVars.getfriutX(), globalVars.getfriutY());
+            Console.Write(' ');
+            Console.SetCursorPosition(globalVars.getFriutX(), globalVars.getFriutY());
             Console.Write('F');
             Console.SetCursorPosition(0, globalVars.getHeight());
             Console.Write($"Score: {globalVars.getScore()}");
@@ -296,18 +306,19 @@ namespace Snake
                 globalVars.setY(1);
             else if (globalVars.getY() < 1)
                 globalVars.setY(globalVars.getHeight() - 2);
-            if (globalVars.getX() == globalVars.getfriutX() && globalVars.getY() == globalVars.getfriutY())
+            if (globalVars.getX() == globalVars.getFriutX() && globalVars.getY() == globalVars.getFriutY())
             {
+                globalVars.setSpeed(globalVars.getSpeed() + 0.5);
                 globalVars.setNTail(globalVars.getNTail() + 1);
                 globalVars.setScore(globalVars.getScore() + 10);
-                globalVars.setfriutX();
-                globalVars.setfriutY();
+                globalVars.setFriutX();
+                globalVars.setFriutY();
             }
         }
         static void Main(string[] args)
         {
             Console.CursorVisible = false; // скрывает на консоли курсор
-            Console.SetWindowSize(globalVars.getWidth(), globalVars.getHeight() + 2);
+            Console.SetWindowSize(globalVars.getWidth() + 8, globalVars.getHeight() + 2);
             game();    
         }
     }
