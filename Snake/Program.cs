@@ -244,15 +244,23 @@ namespace Snake
                 switch (Console.ReadKey().Key)
                 {
                     case ConsoleKey.LeftArrow:
+                        if (globalVars.getDir() == globalVars.eDirection.RIGHT)
+                            break;
                         globalVars.setDir(globalVars.eDirection.LEFT);
                         break;
                     case ConsoleKey.RightArrow:
+                        if (globalVars.getDir() == globalVars.eDirection.LEFT)
+                            break;
                         globalVars.setDir(globalVars.eDirection.RIGHT);
                         break;
                     case ConsoleKey.UpArrow:
+                        if (globalVars.getDir() == globalVars.eDirection.DOWN)
+                            break;
                         globalVars.setDir(globalVars.eDirection.UP);
                         break;
                     case ConsoleKey.DownArrow:
+                        if (globalVars.getDir() == globalVars.eDirection.UP)
+                            break;
                         globalVars.setDir(globalVars.eDirection.DOWN);
                         break;
                 }
