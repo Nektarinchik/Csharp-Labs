@@ -11,3 +11,16 @@ C:\Users\MSI\Desktop\C#\Lab2\Task1\obj\Debug\netcoreapp3.1\Task1.csproj.CoreComp
 C:\Users\MSI\Desktop\C#\Lab2\Task1\obj\Debug\netcoreapp3.1\Task1.dll
 C:\Users\MSI\Desktop\C#\Lab2\Task1\obj\Debug\netcoreapp3.1\Task1.pdb
 C:\Users\MSI\Desktop\C#\Lab2\Task1\obj\Debug\netcoreapp3.1\Task1.genruntimeconfig.cache
+C:\Users\MSI\Desktop\Git\Csharp-Labs\LR2\Task1\bin\Debug\netcoreapp3.1\Task1.exe
+C:\Users\MSI\Desktop\Git\Csharp-Labs\LR2\Task1\bin\Debug\netcoreapp3.1\Task1.deps.json
+C:\Users\MSI\Desktop\Git\Csharp-Labs\LR2\Task1\bin\Debug\netcoreapp3.1\Task1.runtimeconfig.json
+C:\Users\MSI\Desktop\Git\Csharp-Labs\LR2\Task1\bin\Debug\netcoreapp3.1\Task1.runtimeconfig.dev.json
+C:\Users\MSI\Desktop\Git\Csharp-Labs\LR2\Task1\bin\Debug\netcoreapp3.1\Task1.dll
+C:\Users\MSI\Desktop\Git\Csharp-Labs\LR2\Task1\bin\Debug\netcoreapp3.1\Task1.pdb
+C:\Users\MSI\Desktop\Git\Csharp-Labs\LR2\Task1\obj\Debug\netcoreapp3.1\Task1.csprojAssemblyReference.cache
+C:\Users\MSI\Desktop\Git\Csharp-Labs\LR2\Task1\obj\Debug\netcoreapp3.1\Task1.AssemblyInfoInputs.cache
+C:\Users\MSI\Desktop\Git\Csharp-Labs\LR2\Task1\obj\Debug\netcoreapp3.1\Task1.AssemblyInfo.cs
+C:\Users\MSI\Desktop\Git\Csharp-Labs\LR2\Task1\obj\Debug\netcoreapp3.1\Task1.csproj.CoreCompileInputs.cache
+C:\Users\MSI\Desktop\Git\Csharp-Labs\LR2\Task1\obj\Debug\netcoreapp3.1\Task1.dll
+C:\Users\MSI\Desktop\Git\Csharp-Labs\LR2\Task1\obj\Debug\netcoreapp3.1\Task1.pdb
+C:\Users\MSI\Desktop\Git\Csharp-Labs\LR2\Task1\obj\Debug\netcoreapp3.1\Task1.genruntimeconfig.cache

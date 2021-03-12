@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\MSI\\Desktop\\C#\\Lab2\\Task2\\Task2.csproj",
+      "projectUniqueName": "C:\\Users\\MSI\\Desktop\\Git\\Csharp-Labs\\LR2\\Task2\\Task2.csproj",
       "projectName": "Task2",
-      "projectPath": "C:\\Users\\MSI\\Desktop\\C#\\Lab2\\Task2\\Task2.csproj",
+      "projectPath": "C:\\Users\\MSI\\Desktop\\Git\\Csharp-Labs\\LR2\\Task2\\Task2.csproj",
       "packagesPath": "C:\\Users\\MSI\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\MSI\\Desktop\\C#\\Lab2\\Task2\\obj\\",
+      "outputPath": "C:\\Users\\MSI\\Desktop\\Git\\Csharp-Labs\\LR2\\Task2\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\MSI\\AppData\\Roaming\\NuGet\\NuGet.Config",

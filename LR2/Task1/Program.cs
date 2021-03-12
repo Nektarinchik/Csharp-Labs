@@ -7,71 +7,71 @@ namespace Task1
     {
         static void SetCulture(string culture)
         {
-            System.Globalization.CultureInfo cc;
+            CultureInfo cc;
             switch (culture)
             {
                 case "Belarusian":
-                    cc = new System.Globalization.CultureInfo("be");
+                    cc = new CultureInfo("be");
                     System.Threading.Thread.CurrentThread.CurrentCulture = cc; //  sets the culture for the current thread
                     break;
                 case "Ukrainian":
-                    cc = new System.Globalization.CultureInfo("uk");
+                    cc = new CultureInfo("uk");
                     System.Threading.Thread.CurrentThread.CurrentCulture = cc;
                     break;
                 case "Chinese":
-                    cc = new System.Globalization.CultureInfo("zh");
+                    cc = new CultureInfo("zh");
                     System.Threading.Thread.CurrentThread.CurrentCulture = cc;
                     break;
                 case "Czech":
-                    cc = new System.Globalization.CultureInfo("cz");
+                    cc = new CultureInfo("cz");
                     System.Threading.Thread.CurrentThread.CurrentCulture = cc;
                     break;
                 case "Danish":
-                    cc = new System.Globalization.CultureInfo("da");
+                    cc = new CultureInfo("da");
                     System.Threading.Thread.CurrentThread.CurrentCulture = cc;
                     break;
                 case "English":
-                    cc = new System.Globalization.CultureInfo("en");
+                    cc = new CultureInfo("en");
                     System.Threading.Thread.CurrentThread.CurrentCulture = cc;
                     break;
                 case "French":
-                    cc = new System.Globalization.CultureInfo("fr");
+                    cc = new CultureInfo("fr");
                     System.Threading.Thread.CurrentThread.CurrentCulture = cc;
                     break;
                 case "Finnish":
-                    cc = new System.Globalization.CultureInfo("fi");
+                    cc = new CultureInfo("fi");
                     System.Threading.Thread.CurrentThread.CurrentCulture = cc;
                     break;
                 case "German":
-                    cc = new System.Globalization.CultureInfo("de");
+                    cc = new CultureInfo("de");
                     System.Threading.Thread.CurrentThread.CurrentCulture = cc;
                     break;
                 case "Italian":
-                    cc = new System.Globalization.CultureInfo("it");
+                    cc = new CultureInfo("it");
                     System.Threading.Thread.CurrentThread.CurrentCulture = cc;
                     break;
                 case "Japanese":
-                    cc = new System.Globalization.CultureInfo("jv");
+                    cc = new CultureInfo("jv");
                     System.Threading.Thread.CurrentThread.CurrentCulture = cc;
                     break;
                 case "Latvian":
-                    cc = new System.Globalization.CultureInfo("lv");
+                    cc = new CultureInfo("lv");
                     System.Threading.Thread.CurrentThread.CurrentCulture = cc;
                     break;
                 case "Lithuanian":
-                    cc = new System.Globalization.CultureInfo("lt");
+                    cc = new CultureInfo("lt");
                     System.Threading.Thread.CurrentThread.CurrentCulture = cc;
                     break;
                 case "Polish":
-                    cc = new System.Globalization.CultureInfo("pl");
+                    cc = new CultureInfo("pl");
                     System.Threading.Thread.CurrentThread.CurrentCulture = cc;
                     break;
                 case "Russian":
-                    cc = new System.Globalization.CultureInfo("ru");
+                    cc = new CultureInfo("ru");
                     System.Threading.Thread.CurrentThread.CurrentCulture = cc;
                     break;
                 case "Spanish":
-                    cc = new System.Globalization.CultureInfo("es");
+                    cc = new CultureInfo("es");
                     System.Threading.Thread.CurrentThread.CurrentCulture = cc;
                     break;
             }
